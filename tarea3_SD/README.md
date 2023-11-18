@@ -13,7 +13,12 @@ python python3 wiki.py
 ```sh
 docker compose up -d --build
 ```
-
+```sh
+docker compose down -v
+```
+```sh
+docker system prune -a
+```
 ```sh
 hdfs dfs -mkdir /user
 ```
@@ -44,9 +49,10 @@ hdfs dfs -ls input
 mapred streaming -files mapper.py,reducer.py -input /user/hduser/input/*.txt -output hduser/outhadoop/ -mapper ./mapper.py -reducer ./reducer.py
 ```
 ```sh
-hdfs dfs -get /user/hduser/hduser/outhadoop/ /home/hduser/proyecto
+hdfs dfs -get /user/hduser/hduser/outhadoop/ /home/hduser/examples
 ```
 ```sh
-python python3 search.py
+python 
 ```
+
 
